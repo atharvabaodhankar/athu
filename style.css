@@ -440,7 +440,7 @@ nav.activenavbar {
     top: 0;
     left: 0;
     z-index: -1;
-    opacity: 0;
+    opacity: .2;
     filter: saturate(0.3);
 }
 
@@ -809,7 +809,6 @@ nav.activenavbar {
   }
   
   .send-button {
-    margin-top: 15px;
     height: 34px;
     display: flex;
     align-items: center;
@@ -820,17 +819,21 @@ nav.activenavbar {
     transition: all .2s ease-in-out;
     cursor: pointer;
     border: none;
+    overflow: hidden;
   }
   
   .alt-send-button {
     width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 34px;
     transition: all .2s ease-in-out;
   }
   
   .send-text {
     display: block;
-    margin-top: 10px;
+    margin-top: -10px;
     font: 700 12px 'Lato', sans-serif;
     letter-spacing: 2px;
   }
@@ -1248,6 +1251,17 @@ nav.activenavbar {
         margin-left: 0;
         padding-right: 0;
     }
+    .btn-primary {
+        color: #fff;
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .alt-send-button {
+        width: 100%;
+    }
   }
 
 @media screen and (max-width:550px) {
@@ -1319,8 +1333,13 @@ nav.activenavbar {
         margin: 1rem;
     }
     .contact-list {
-
         padding-right: -13px;
+    }
+    html:not(.no-js) [data-aos^=fade][data-aos^=fade].aos-animate {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+        width: 80vw;
     }
   }
 @media screen and (max-width:350px) {
